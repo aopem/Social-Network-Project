@@ -9,6 +9,13 @@ all: $(EXEC)
 
 social_network: $(OBJS)
 		@$(CXX) $(CPPFLAGS) -o social_network $(OBJS)
+		@echo "--------------------------------------------------------------------------------"
+		@echo "Finished building"
 
 clean:
+		@echo "Cleaning..."
 		@$(RM) $(OBJS) social_network
+		@echo "Finished cleaning"
+
+# suppress command output
+$(VERBOSE).SILENT:
